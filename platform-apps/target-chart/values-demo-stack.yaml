@@ -73,15 +73,7 @@ applications:
       - ServerSideApply=true
 
   - name: mimir
-
-  - name: falco
-    annotations:
-      argocd.argoproj.io/compare-options: ServerSideDiff=true
-    helmOptions:
-      skipCrds: true
-    syncOptions:
-      - ServerSideApply=true
-
+  
   - name: kyverno
     syncOptions:
       - ServerSideApply=true
