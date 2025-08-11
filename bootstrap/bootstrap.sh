@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ARCH=$(uname -m)
+OS=$(uname -s)
+
 # variables which must be defined by user
 while read var; do
   [ -z "${!var}" ] && { echo "$var is empty or not set. Exiting.."; exit 1; }
@@ -69,7 +72,16 @@ cat bootstrap/customer-config.yaml
 echo "----"
 
 echo "downloading gomplate ..."
-curl --progress-bar -o gomplate -SL https://github.com/hairyhenderson/gomplate/releases/download/v4.3.2/gomplate_linux-amd64
+if [[ "$ARCH" == "amd64" || "$ARCH" == "x86_64" ]]; then
+  curl --progress-bar -o gomplate -SL https://github.com/hairyhenderson/gomplate/releases/download/v4.3.2/gomplate_linux-amd64
+elif [[ "$ARCH" == "arm64" ]]; then
+  curl --progress-bar -o gomplate -SL https://github.com/hairyhenderson/gomplate/releases/download/v4.3.2/gomplate_linux-arm64
+else
+  echo "Unsupported architecture: $ARCH" >&2
+  exit 1
+fi
+  
+
 chmod 755 gomplate
 
 echo "rendering values templates ..."
