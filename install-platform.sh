@@ -62,7 +62,7 @@ convert_to_seconds() {
   if [[ "$ARCH" == "amd64" || "$ARCH" == "x86_64" ]]; then
     date -d "${timestamp}" '+%s'
   elif [[ "$ARCH" == "arm64" ]]; then
-    date -j -f "%Y-%m-%dT%H:%M:%S" "${timestamp}" "+%s"
+    /bin/date -j -f "%Y-%m-%dT%H:%M:%S" "${timestamp}" "+%s"
   else
     echo "Unsupported architecture: $ARCH" >&2
     exit 1
@@ -73,7 +73,7 @@ utc_now_seconds() {
   if [[ "$ARCH" == "amd64" || "$ARCH" == "x86_64" ]]; then
     date --date=$(date -u +"%Y-%m-%dT%T") '+%s'
   elif [[ "$ARCH" == "arm64" ]]; then
-    date -j -f "%Y-%m-%dT%T" "$(date -u +"%Y-%m-%dT%T")" '+%s'
+    /bin/date -j -f "%Y-%m-%dT%T" "$(date -u +"%Y-%m-%dT%T")" '+%s'
   else
     echo "Unsupported architecture: $ARCH" >&2
     exit 1
