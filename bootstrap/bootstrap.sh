@@ -75,7 +75,7 @@ echo "downloading gomplate ..."
 if [[ "$ARCH" == "amd64" || "$ARCH" == "x86_64" ]]; then
   curl --progress-bar -o gomplate -SL https://github.com/hairyhenderson/gomplate/releases/download/v4.3.2/gomplate_linux-amd64
 elif [[ "$ARCH" == "arm64" ]]; then
-  curl --progress-bar -o gomplate -SL https://github.com/hairyhenderson/gomplate/releases/download/v4.3.2/gomplate_linux-arm64
+  curl --progress-bar -o gomplate -SL https://github.com/hairyhenderson/gomplate/releases/download/v4.3.2/gomplate_darwin-arm64
 else
   echo "Unsupported architecture: $ARCH" >&2
   exit 1
