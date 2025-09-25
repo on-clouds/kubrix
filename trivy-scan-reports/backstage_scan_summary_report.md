@@ -4,7 +4,7 @@
 <h4>No Misconfigurations found</h4>
 
 <h3>Target <code>ghcr.io/suxess-it/sx-backstage:v1.38.1 (debian 12.11)</code></h3>
-<h4>Vulnerabilities (292)</h4>
+<h4>Vulnerabilities (297)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -411,6 +411,13 @@
         <td>HIGH</td>
         <td>6.1.140-1</td>
         <td>6.1.147-1</td>
+    </tr>
+    <tr>
+        <td><code>linux-libc-dev</code></td>
+        <td>CVE-2024-41935</td>
+        <td>HIGH</td>
+        <td>6.1.140-1</td>
+        <td></td>
     </tr>
     <tr>
         <td><code>linux-libc-dev</code></td>
@@ -1968,6 +1975,34 @@
     </tr>
     <tr>
         <td><code>linux-libc-dev</code></td>
+        <td>CVE-2025-39877</td>
+        <td>HIGH</td>
+        <td>6.1.140-1</td>
+        <td>6.1.153-1</td>
+    </tr>
+    <tr>
+        <td><code>linux-libc-dev</code></td>
+        <td>CVE-2025-39880</td>
+        <td>HIGH</td>
+        <td>6.1.140-1</td>
+        <td>6.1.153-1</td>
+    </tr>
+    <tr>
+        <td><code>linux-libc-dev</code></td>
+        <td>CVE-2025-39881</td>
+        <td>HIGH</td>
+        <td>6.1.140-1</td>
+        <td>6.1.153-1</td>
+    </tr>
+    <tr>
+        <td><code>linux-libc-dev</code></td>
+        <td>CVE-2025-39883</td>
+        <td>HIGH</td>
+        <td>6.1.140-1</td>
+        <td>6.1.153-1</td>
+    </tr>
+    <tr>
+        <td><code>linux-libc-dev</code></td>
         <td>CVE-2025-40014</td>
         <td>HIGH</td>
         <td>6.1.140-1</td>
@@ -2060,7 +2095,7 @@
 </table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>Node.js</code></h3>
-<h4>Vulnerabilities (15)</h4>
+<h4>Vulnerabilities (16)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -2173,6 +2208,13 @@
         <td>CRITICAL</td>
         <td>2.4.11</td>
         <td>2.4.12</td>
+    </tr>
+    <tr>
+        <td><code>tar-fs</code></td>
+        <td>CVE-2025-59343</td>
+        <td>HIGH</td>
+        <td>3.0.9</td>
+        <td>3.1.1, 2.1.3, 1.16.5</td>
     </tr>
 </table>
 <h4>No Misconfigurations found</h4>
